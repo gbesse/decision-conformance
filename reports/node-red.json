@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "suite": "decision-conformance",
+  "suiteVersion": "0.1.0",
+  "at": "2026-09-21T12:37:39.785Z",
+  "host": "node-red",
+  "version": "5.0.7",
+  "adapterVersion": "0.2.0",
+  "level": "host-runtime",
+  "synthetic": true,
+  "model": "jev-1.13.0",
+  "passed": true,
+  "scenarios": [
+    {
+      "id": "probability-not-confidence",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 11
+    },
+    {
+      "id": "confidence-cannot-bypass-threshold",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 3
+    },
+    {
+      "id": "inclusive-threshold-boundary",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 2
+    },
+    {
+      "id": "valid-negative-review",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 2
+    },
+    {
+      "id": "invalid-state-no-inference",
+      "passed": true,
+      "providerCalls": 0,
+      "durationMs": 2
+    },
+    {
+      "id": "missing-question-answer",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 2
+    },
+    {
+      "id": "invalid-probability-mass",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 2
+    },
+    {
+      "id": "wrong-model-rejected",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "provider-error-not-fallback",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 2
+    },
+    {
+      "id": "nonresponsive-provider-deadline",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 33
+    },
+    {
+      "id": "changed-policy-version-provenance",
+      "passed": true,
+      "providerCalls": 1,
+      "durationMs": 2
+    }
+  ],
+  "limitations": [
+    "No live Jev quality, availability or billing measurements",
+    "No certification by TypeSafe or the host vendor",
+    "Compatibility applies only to the versions and scenarios reported"
+  ]
+}

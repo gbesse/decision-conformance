@@ -1,0 +1,5 @@
+// Purpose: Check the reusable suite against a correct implementation and a deliberately broken host contract.
+import test from 'node:test';import assert from 'node:assert/strict';import {evaluate} from '@gbesse/decisionpacks';import {runConformance} from '../src/index.mjs';import {verifyNodeRed} from '../adapters/node-red.mjs';
+test('reference contract passes all cases',async()=>{const r=await runConformance({invoke:(pack,state,options)=>evaluate(pack,state,options),host:'decisionpacks',version:'0.1.0',adapterVersion:'fixture'});assert.equal(r.passed,true,JSON.stringify(r));});
+test('suite rejects adapters that turn every error into review',async()=>{const r=await runConformance({invoke:async()=>({outcome:'review'}),host:'broken',version:'1',adapterVersion:'fixture'});assert.equal(r.passed,false);assert.ok(r.scenarios.filter(s=>!s.passed).length>5);});
+test('native Node-RED host passes finite-contract scenarios',async()=>{const r=await verifyNodeRed();assert.equal(r.passed,true,JSON.stringify(r));});
