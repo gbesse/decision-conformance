@@ -1,7 +1,7 @@
 {
   "name": "@gbesse/decision-conformance",
   "description": "Run portable behavioral conformance scenarios against Jev decision integrations.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -31,7 +31,8 @@
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "check": "node scripts/check.mjs",
-    "verify:node-red": "node scripts/verify-node-red.mjs"
+    "verify:node-red": "node scripts/verify-node-red.mjs",
+    "demo:adapters": "node examples/adapter-comparison.mjs"
   },
   "devDependencies": {
     "node-red": "5.0.7",
